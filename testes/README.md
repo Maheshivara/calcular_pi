@@ -28,14 +28,14 @@ Garuda
 
 ## Resultados
 
-### Com 10e9 termos
+### Com 10e6 termos
 
 ![Um milhão de termos, uma thread](./million/one.png)
 ![Um milhão de termos, duas threads](./million/two.png)
 ![Um milhão de termos, quatro threads](./million/four.png)
 ![Um milhão de termos, oito threads](./million/eight.png)
 
-### Com 10e12 termos
+### Com 10e9 termos
 
 ![Um bilhão de termos, uma thread](./billion/one.png)
 ![Um bilhão de termos, duas threads](./billion/two.png)
