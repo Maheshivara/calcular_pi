@@ -16,7 +16,7 @@ Garuda
 
 ### Processador
 
-11th Gen Intel(R) Core(TM) i5-1135G7
+11th Gen Intel(R) Core(TM) i5-1135G7 (4 núcleos e 8 threads)
 
 ### Memória Principal
 
