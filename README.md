@@ -6,7 +6,7 @@ Atividade apresentada na disciplina de Sistemas Operacionais durante o 3º perí
 
 ### Equipe
 
-- Augusto Lumes
+- [Augusto Lumes](https://github.com/augustolumes)
 - Humberto Augusto
 - Lucas Silva
 - [Luis Gabriel](https://github.com/Maheshivara)

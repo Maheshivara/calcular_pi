@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 #include <pthread.h>
 
 // Montando uma estrutura para passar informações para a thread
@@ -39,18 +40,34 @@ void* leibniz(void* arg) {
   pthread_exit(NULL);
 }
 
+// Retorna o número máximo de threads simultâneas que o processador suporta
+// Retorna -1 se falhar na verificação
+long getMaxThreads() {
+  long num_threads;
+  num_threads = sysconf(_SC_NPROCESSORS_ONLN);
+}
+
 int main() {
   int num_threads, remainder;
   unsigned long long int total_terms, divided_terms_per_thread;
   struct timespec start, end;
   double time_spend;
-
+  long maxThreadNum = getMaxThreads();
+  if (maxThreadNum == -1) {
+    printf("Falha ao checar o numero maximo de threads simultaneas suportadas pelo processador\n");
+    return 1;
+  }
   // Solicitando o número de threads a ser usado
   printf("Digite o numero de threads: ");
   scanf("%d", &num_threads);
 
   if (num_threads <= 0) {
     printf("Numero de threads deve ser maior ou igual a 1\n");
+    return 1;
+  }
+
+  if (num_threads > maxThreadNum) {
+    printf("O numero maximo de threads simultaneas do processador atual é de %ld\n", maxThreadNum);
     return 1;
   }
 
